@@ -1,4 +1,5 @@
 PORT = 8000
 
-import BaseHTTPServer, SimpleHTTPServer
-BaseHTTPServer.HTTPServer(('localhost', PORT), SimpleHTTPServer.SimpleHTTPRequestHandler).serve_forever()
+import http.server as BaseHTTPServer
+import http.server as SimpleHTTPServer
+BaseHTTPServer.HTTPServer(('0.0.0.0', PORT), SimpleHTTPServer.SimpleHTTPRequestHandler).serve_forever()
